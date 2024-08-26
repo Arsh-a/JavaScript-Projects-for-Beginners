@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIDE BAR</title>
+    <style>
+        .nav{
+            display: none;
+        }
+        .nav ul{
+            list-style-type: none;
+            margin-left: 2%;
+            margin-top: 5vh;
+            width: 20%;
+            background-color: aquamarine;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
+        }
+        ul button{
+            margin-left: 80%;
+        }
+        li{
+            margin-top: 2vh;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="open" onclick="show()">Side Bar</button>
+    <div class="nav">
+        
+        <ul>
+            <button id="close" onclick="side()">x</button>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+
+    <script>
+        let islist=false;
+        function show()
+        {
+            if(islist==false)
+        {
+            document.querySelector(".nav").style.display="block";
+        }
+            islist=true;
+        }
+
+        function side()
+        {
+            if(islist==true)
+        {
+            document.querySelector(".nav").style.display="none";
+        }
+        islist=false;
+            
+        }
+    </script>
+</body>
+</html>
