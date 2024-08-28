@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+        } */
+        body{
+            position: relative;
+            /* background-image: url();
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+             */
+        }
+        body img{
+            margin: 2% 4%;
+            width: 90vw;
+            height:88vh;
+            /* position: absolute; */
+        }
+        body>button{
+            position: absolute;
+            margin: 35% 45% 0;
+            height: 7vh;
+            width: 10vw;
+            /* margin: 30% 10% 0%; */
+            z-index: 100;
+            border: none;
+            background-color: rgb(78, 6, 6);
+            border-radius: 15px;
+            color: #ffffff;
+        }
+
+        .modal{
+            position: fixed;
+            margin: -40% 38% 0;
+            padding: 1%;
+            height: 300px;
+            width: 300px;
+            text-align: justify;
+            border: 2px solid brown;
+            display: none;
+            background-color: #ffffff;
+
+        }
+        .modal button:nth-of-type(1)
+        {
+            height: 7vh;
+            width: 10vw;
+            border: none;
+            background-color: rgb(78, 6, 6);
+            border-radius: 15px;
+            color: #ffffff;
+        }
+        /* .modal button:nth-of-type(1)
+        {
+            margin-left: 90%;
+            height: 5vh;
+            width: 2vw;
+            border: none;
+            background-color: rgb(78, 6, 6);
+            border-radius: 50%;
+            color: #ffffff;
+        } */
+    </style>
+</head>
+<body>
+    <button type="button" id="one">Modal button</button>
+    <img src="https://www.iwantthatdoor.com/wp-content/uploads/2021/06/modern-living-interior-design-1920x1139.jpg" alt="">
+    <div class="modal">
+        <!-- <button class="close1">x</button> -->
+        <h2>Modal content</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur iusto neque saepe provident odio vel at nemo facilis molestias enim ipsa fugit deserunt esse culpa quo, facere quaerat possimus dolore amet voluptatum. Odio incidunt est animi corrupti tenetur eos quam vitae temporibus itaque id? Iure rem modi tenetur provident doloribus.</p>
+        <button id="close">Close</button>
+    </div>
+
+    <script>
+        // let ispresent=true;
+
+        document.addEventListener("DOMContentLoaded",function()
+            {
+                function modelShow(){
+            // document.querySelector("img").style.display="none";/
+            document.querySelector(".modal").style.display="block";
+                }
+            
+        
+
+        function modelClose(){
+            // document.querySelector("img").style.display="block";
+            document.querySelector(".modal").style.display="none";
+         }
+            
+        
+
+        document.getElementById("one").addEventListener("click",modelShow)
+        document.getElementById("close").addEventListener("click",modelClose)
+            
+      }  )
+    
+        
+       
+
+    </script>
+</body>
+</html>
